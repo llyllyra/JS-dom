@@ -67,7 +67,9 @@ document.addEventListener("keyup", event => {
 
 
 const saycolor = (e)=>{
+  
   let color = e.target.classList[1];
   return alert(color)
 }
+let squares = document.createElement("div.displayedsquare")
 displayedquare.addEventListener("click", saycolor)

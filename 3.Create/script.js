@@ -24,10 +24,12 @@ let learner = [
     "Antoine",
     "Miguel",
     "Kevin",
-    "Sébastien"
+    
 ];
 
-
+const randomGenerator = (n) => {
+    return Math.floor(Math.random() * n)
+}
 function randomized(learner) {
     let number = learner.length, t
     const newLearner = learner
@@ -46,22 +48,21 @@ let addSection = () => {
     let random = randomized(learner), i
     let newSection = document.createElement("section");
     const article = document.querySelector("article")
-    article.appendChild(newSection, article);
     for (i = 0; i < random.length; i++) {
         const r = Math.floor(Math.random() * 255);
         const g = Math.floor(Math.random() * 255);
         const b = Math.floor(Math.random() * 255); 
         const color = `rgb(${r},${g},${b})`;
 
-        
+        article.appendChild(newSection, article);
         let paragraphe = document.createElement("p");
         let peopleSection = document.createTextNode(random[i]);
         newSection.appendChild(paragraphe);
         paragraphe.appendChild(peopleSection);
         paragraphe.style.background = color;
-        r < 150 && g < 150
+        (0.3*(r) + 0.59*(g) +(0.11*(b)) <= 128)
             ?(paragraphe.style.color = "white")
-            : (paragraphe.style.color = "black");
+            : (paragraphe.style.color = "black")
     }
 }
 addSection()
