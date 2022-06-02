@@ -48,13 +48,14 @@ let addSection = () => {
     let random = randomized(learner), i
     let newSection = document.createElement("section");
     const article = document.querySelector("article")
+    article.appendChild(newSection, article);
     for (i = 0; i < random.length; i++) {
         const r = Math.floor(Math.random() * 255);
         const g = Math.floor(Math.random() * 255);
         const b = Math.floor(Math.random() * 255); 
         const color = `rgb(${r},${g},${b})`;
 
-        article.appendChild(newSection, article);
+        
         let paragraphe = document.createElement("p");
         let peopleSection = document.createTextNode(random[i]);
         newSection.appendChild(paragraphe);

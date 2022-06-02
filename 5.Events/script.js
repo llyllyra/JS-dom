@@ -14,3 +14,8 @@ for (let actionSquare of actionSquares) {
   actionSquare.addEventListener('click', clickOnSquare)
 }
 
+let displayedquare = document.querySelector(".displayedquare")
+
+
+displayedquare.append()
+
