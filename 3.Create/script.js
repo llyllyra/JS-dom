@@ -27,9 +27,7 @@ let learner = [
     "Sébastien"
 ];
 
-const randomGenerator = (n) => {
-    return Math.floor(Math.random() * n)
-}
+
 function randomized(learner) {
     let number = learner.length, t
     const newLearner = learner
