@@ -73,3 +73,4 @@ const saycolor = (e)=>{
 }
 let squares = document.createElement("div.displayedsquare")
 displayedquare.addEventListener("click", saycolor)
+
