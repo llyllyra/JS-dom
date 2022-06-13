@@ -11,12 +11,6 @@ for (important of importants){
 let img = document.querySelectorAll("img"), i;
 let imgImportant = document.querySelector("img.important")
 
-for (img of img) {
-    img.style.display = "none"
-   if (imgImportant){
-       imgImportant.style.display = "block"
-   }
-}
 
 const image = document.querySelectorAll("img");
 image.forEach((item) => {
