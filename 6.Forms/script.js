@@ -27,10 +27,14 @@ inputPwd.addEventListener("input", () => {
 });
 
 inputPwdconfirm.addEventListener("input", () => {
-
-    (inputPwd.value == inputPwdconfirm.value) ?
+    if (inputPwd.value == inputPwdconfirm.value){
         inputPwdconfirm.style.color = "green"
-        : inputPwdconfirm.style.color = "red";
+        inputPwd.style.color = "green"
+    }else{
+        inputPwdconfirm.style.color = "red"
+        inputPwd.style.color = "red";
+    }
+    
 });
 
 let toggleSelect = document.getElementById("toggle-darkmode");
