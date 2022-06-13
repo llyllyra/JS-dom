@@ -2,7 +2,7 @@
 */
 const list = document.querySelector("ol");
 const firstChild = list.firstChild;
-const lastChild= list.children[4];
+const lastChild= list.lastElementChild;
 list.insertBefore(lastChild, firstChild);
 
 let main = document.querySelector("main");
