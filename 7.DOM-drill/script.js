@@ -77,6 +77,5 @@ function remove(a, b) {
 
 remove(list.children[2], list.children[4]);
 remove(list.children[3], list.children[9]);
-console.log(list.children);
 
 

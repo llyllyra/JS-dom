@@ -2,6 +2,9 @@ const _initTime = Date.now()
 let displayedquare = document.querySelector(".displayedquare-wrapper")
 let ListUl = document.querySelector("ul")
 const actionSquares = document.querySelectorAll('.actionsquare')
+
+
+
 displayedquare.classList.remove("displayedquare-wrapper")
 displayedquare.classList.add("displayedsquare-wrapper")
 
@@ -21,7 +24,7 @@ const clickOnSquare = (e) => {
   console.log(time)
 
   displayedquare.append(square)
-  square.classList.add("displayedsquare", color)
+  square.classList.add("displayedsquare", color, "alert")
 
   listeLi.innerHTML = `[${time}] Created a new ${color} square.`
   ListUl.append(listeLi)
@@ -36,27 +39,29 @@ for (let actionSquare of actionSquares) {
 
 document.addEventListener("keyup", event => {
   let time = getElapsedTime();
-  if (event.isComposing || event.key === " ") {
-    let listeLi = document.createElement("li");
-    ListUl.append(listeLi)
-    listeLi.innerHTML = `[${time}] Created a new space bar.`
+  if (event.key === " ") {
     const r = Math.floor(Math.random() * 255);
     const g = Math.floor(Math.random() * 255);
     const b = Math.floor(Math.random() * 255);
 
     const color = `rgb(${r},${g},${b})`;
     document.body.style.background = color;
+    let listeLi = document.createElement("li");
+    ListUl.append(listeLi)
+    listeLi.innerHTML = `[${time}] Created a new space bar ${color}].`
+    
+   
     return;
   }
   
-  if (event.isComposing || event.key === "l") {
+  if (event.key === "l") {
     let li = document.querySelectorAll("li")
     for (const iterator of li) {
       ListUl.removeChild(ListUl.firstElementChild)
     }
     
   }
-  if (event.isComposing || event.key === "s") {
+  if (event.key === "s") {
     let delDiv = document.querySelectorAll(".displayedsquare")
     for (const iterator of delDiv) {
       displayedquare.removeChild(displayedquare.firstElementChild)
@@ -66,11 +71,11 @@ document.addEventListener("keyup", event => {
 
 
 
-const saycolor = (e)=>{
+const saycolor = (e) =>{
   
   let color = e.target.classList[1];
   return alert(color)
 }
-let squares = document.createElement("div.displayedsquare")
+
 displayedquare.addEventListener("click", saycolor)
 

@@ -18,6 +18,6 @@ let randomBGC = () =>{
     document.body.style.background = color;
 }
 
-setInterval(randomBGC, 2000)
+setInterval(randomBGC, 5000)
 
 
