@@ -54,15 +54,15 @@ select.addEventListener("change", function () {
 });
 
 
-let duplicate = true;
+
 document.body.addEventListener("keyup", event => {
     if (event.key === "r") {
         for (i = list.children.length; i >= 0; i--) {
-            list.appendChild(list.children[Math.random() * i | 1]);
+            list.appendChild(list.children[Math.random() * i |3 ]);
         }
         
     }
-    if (event.key === "d" && duplicate){
+    if (event.key === "d"){
         let firstChild = list.firstElementChild;
         firstChildClone = firstChild.cloneNode(true);
         list.insertBefore(firstChildClone, firstChild);
@@ -77,5 +77,3 @@ function remove(a, b) {
 
 remove(list.children[2], list.children[4]);
 remove(list.children[3], list.children[9]);
-
-

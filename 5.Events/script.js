@@ -27,7 +27,7 @@ const clickOnSquare = (e) => {
   square.classList.add("displayedsquare", color, "alert")
 
   listeLi.innerHTML = `[${time}] Created a new ${color} square.`
-  ListUl.append(listeLi)
+  ListUl.appendChild(listeLi)
 }
 
 

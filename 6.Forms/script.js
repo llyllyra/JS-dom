@@ -22,17 +22,17 @@ let inputPwdconfirm = document.getElementById("pwd-confirm");
 inputPwd.addEventListener("input", () => {
 
     (inputPwd.value.length < 6) ?
-        inputPwd.style.color = "red"
-        : inputPwd.style.color = "green"
+        inputPwd.style.backgroundColor = "red"
+        : inputPwd.style.backgroundColor = "green"
 });
 
 inputPwdconfirm.addEventListener("input", () => {
     if (inputPwd.value == inputPwdconfirm.value){
-        inputPwdconfirm.style.color = "green"
-        inputPwd.style.color = "green"
+        inputPwdconfirm.style.backgroundColor = "green"
+        inputPwd.style.backgroundColor = "green"
     }else{
-        inputPwdconfirm.style.color = "red"
-        inputPwd.style.color = "red";
+        inputPwdconfirm.style.backgroundColor = "red"
+        inputPwd.style.backgroundColor = "red";
     }
     
 });
@@ -41,7 +41,6 @@ let toggleSelect = document.getElementById("toggle-darkmode");
 let body = document.querySelector("body");
 
 toggleSelect.addEventListener("change", () => {
-    console.log(toggleSelect.value)
     switch (toggleSelect.value) {
         case "dark":
             body.style.backgroundColor = "black";
